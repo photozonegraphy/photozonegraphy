@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="google-site-verification" content="uspBciGPOyoH29SBwFNWerPj890Cj9eiDkTxHtm3ALk" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome Genius Photographer</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f0f0f;
+    color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Multi-color fast breathing neon animation */
+  @keyframes neonBreath {
+    0%, 100% {
+      text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #00ffff,
+        0 0 30px #00ffff,
+        0 0 40px #ffff00,
+        0 0 50px #ffff00,
+        0 0 60px #ff00ff;
+      color: #f0e9ff;
+      opacity: 1;
+    }
+    50% {
+      text-shadow:
+        0 0 15px #ff0000,
+        0 0 30px #ff0000,
+        0 0 40px #00ff00,
+        0 0 50px #00ff00,
+        0 0 60px #0000ff,
+        0 0 70px #0000ff,
+        0 0 80px #ff0000;
+      color: #ffffff;
+      opacity: 0.7;
+    }
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.3em;
+    letter-spacing: 1px;
+    animation: neonBreath 1.5s ease-in-out infinite;
+    user-select: none;
+  }
+
+  p.question {
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+    color: #cfc;
+    text-shadow:
+      0 0 8px #00ffff;
+  }
+
+  .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  a.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 160px;
+    background: #1c1c1c;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 15px 6px;
+    transition: box-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    user-select: none;
+    position: relative;
+  }
+
+  /* Phone or Tablet box - blue neon */
+  a.box.phone {
+    box-shadow:
+      0 0 15px 6px #0099ff;
+    color: #b3e0ff;
+  }
+
+  /* On hover, white neon */
+  a.box.phone:hover,
+  a.box.phone:focus {
+    box-shadow:
+      0 0 25px 10px #ffffff;
+    color: #fff;
+    transform: translateY(-8px);
+    outline: none;
+  }
+
+  /* Laptop or PC box - red neon */
+  a.box.pc {
+    box-shadow:
+      0 0 8px 2px #ff0000,
+      0 0 20px 8px #ff0000;
+    color: #ff4444;
+  }
+
+  /* On hover, blue neon */
+  a.box.pc:hover,
+  a.box.pc:focus {
+    box-shadow:
+      0 0 10px 3px #00ccff,
+      0 0 25px 8px #33ddff;
+    color: #aeefff;
+    transform: translateY(-8px);
+    outline: none;
+  }
+
+  /* For keyboard accessibility */
+  a.box:focus-visible {
+    outline: 2px solid #00ffff;
+    outline-offset: 4px;
+  }
+
+  /* Floating Contact Us Button */
+  .floating-contact {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #800080;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow:
+      0 0 15px 3px #a020f0,
+      0 0 25px 8px #800080;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    user-select: none;
+  }
+
+  .floating-contact:hover,
+  .floating-contact:focus {
+    box-shadow:
+      0 0 20px 5px #00ffff,
+      0 0 30px 10px #33ddff;
+    transform: scale(1.1);
+    outline: none;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 18px 12px;
+    font-size: 0.95rem;
+  }
+
+  footer a {
+    color: #c678dd;
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+    p.question {
+      font-size: 1.2rem;
+    }
+    .container {
+      gap: 25px;
+    }
+    a.box {
+      width: 90vw;
+      max-width: 320px;
+      height: 140px;
+      font-size: 1.3rem;
+    }
+    .floating-contact {
+      padding: 12px 22px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <h1>Welcome Genius Photographer</h1>
+  <p class="question">Are you currently in a Phone or in a Computer?</p>
+
+  <div class="container">
+    <a href="phone.html" class="box phone" tabindex="0" aria-label="Go to Phone or Tablet page">
+      Phone or Tablet
+    </a>
+    <a href="pc.html" class="box pc" tabindex="0" aria-label="Go to Laptop or PC page">
+      Laptop or PC
+    </a>
+  </div>
+</main>
+
+<a href="contactus.html" class="floating-contact" aria-label="Contact us via email">
+  Contact Us
+</a>
+
+<footer>
+  <p>© 2025 PhotoZoneGraphy. All Rights Reserved.</p>
+  <p>Follow us on <a href="https://www.instagram.com/photozonegraphy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="PhotoZoneGraphy Instagram page">Instagram</a></p>
+</footer>
+
+</body>
+</html>
